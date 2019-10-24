@@ -1,0 +1,15 @@
+<html>
+<body>
+    {% for tarea in listado %}
+    {% if tarea.estado %}
+	    <li><strike>{{ tarea }}</strike></li>
+
+	 {% else %}
+        <li>{{ tarea }}</li>  <small><a href="/tarea/{{ tarea.id }}"> marcar realizada</a></small>
+    
+	 {% endif %}
+    {% endfor %}
+
+    <a href="{% url 'index'  %}">Agregar nueva Tarea</a>
+</body>
+</html>

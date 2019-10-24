@@ -1,0 +1,10 @@
+<html>
+<body>
+
+    <ul>
+    {% for tarea in listado %}
+        <li><a href="{% url 'listado' tareas.id %}">{{ listado.tareas }}</a></li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
